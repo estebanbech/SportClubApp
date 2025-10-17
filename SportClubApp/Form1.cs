@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using System.Drawing;
 
 namespace SportClubApp
 {
@@ -10,13 +9,13 @@ namespace SportClubApp
         private Image? imagenNadadorBlanca;
 
         // Variables para los menús dropdown
-        private ContextMenuStrip menuRegistro;
-        private ContextMenuStrip menuAcceder;
+        private ContextMenuStrip menuRegistro = null!;
+        private ContextMenuStrip menuAcceder = null!;
 
         // Variables para el zoom en pictureBox1
         private Size tamañoOriginalPictureBox;
         private Size tamañoZoomedPictureBox;
-        private System.Windows.Forms.Timer timerZoom;
+        private System.Windows.Forms.Timer timerZoom = null!;
         private bool zoomingIn = false;
 
         public Form1()
@@ -58,15 +57,19 @@ namespace SportClubApp
             pictureBox1.MouseLeave += PictureBox1_MouseLeave;
 
             // Timer para animación suave (intervalo de 20ms para fluidez)
-            timerZoom = new System.Windows.Forms.Timer();
-            timerZoom.Interval = 20;
+            timerZoom = new()
+            {
+                Interval = 20
+            };
+
+            ToolStripSeparator separador = new();
             timerZoom.Tick += TimerZoom_Tick;
         }
 
         // ============================================
         // EVENTO: Mouse entra en pictureBox1 (inicia zoom in)
         // ============================================
-        private void PictureBox1_MouseEnter(object sender, EventArgs e)
+        private void PictureBox1_MouseEnter(object? sender, EventArgs e)
         {
             zoomingIn = true;
             timerZoom.Start();
@@ -75,7 +78,7 @@ namespace SportClubApp
         // ============================================
         // EVENTO: Mouse sale de pictureBox1 (inicia zoom out)
         // ============================================
-        private void PictureBox1_MouseLeave(object sender, EventArgs e)
+        private void PictureBox1_MouseLeave(object? sender, EventArgs e)
         {
             zoomingIn = false;
             timerZoom.Start();
@@ -84,7 +87,7 @@ namespace SportClubApp
         // ============================================
         // EVENTO: Tick del timer para animar el zoom
         // ============================================
-        private void TimerZoom_Tick(object sender, EventArgs e)
+        private void TimerZoom_Tick(object? sender, EventArgs e)
         {
             int step = 5; // Paso de animación (ajusta para velocidad)
 
@@ -130,19 +133,26 @@ namespace SportClubApp
         // ============================================
         private void InicializarMenuRegistro()
         {
-            menuRegistro = new ContextMenuStrip();
-            menuRegistro.BackColor = Color.FromArgb(30, 30, 30);
-            menuRegistro.ForeColor = Color.White;
-            menuRegistro.ShowImageMargin = false;
-            menuRegistro.Font = new Font("Segoe UI", 10F);
+            menuRegistro = new ContextMenuStrip()
+            {
+                BackColor = Color.FromArgb(30, 30, 30),
+                ForeColor = Color.White,
+                ShowImageMargin = false,
+                Font = new Font("Segoe UI", 10F)
+            };
+            
 
             // Crear opciones del menú
-            ToolStripMenuItem itemSocio = new ToolStripMenuItem("Registrar Socio");
-            itemSocio.ForeColor = Color.White;
+            ToolStripMenuItem itemSocio = new("Registrar Socio")
+            {
+                ForeColor = Color.White
+            };
             itemSocio.Click += ItemSocio_Click;
 
-            ToolStripMenuItem itemNoSocio = new ToolStripMenuItem("Registrar No Socio");
-            itemNoSocio.ForeColor = Color.White;
+            ToolStripMenuItem itemNoSocio = new("Registrar No Socio")
+            {
+                ForeColor = Color.White
+            };
             itemNoSocio.Click += ItemNoSocio_Click;
 
             // Agregar items al menú
@@ -157,10 +167,12 @@ namespace SportClubApp
                 {
                     ToolStripMenuItem currentItem = menuItem;
 
-                    currentItem.MouseEnter += (s, e) => {
+                    currentItem.MouseEnter += (s, e) =>
+                    {
                         currentItem.BackColor = Color.FromArgb(10, 30, 120);
                     };
-                    currentItem.MouseLeave += (s, e) => {
+                    currentItem.MouseLeave += (s, e) =>
+                    {
                         currentItem.BackColor = Color.FromArgb(30, 30, 30);
                     };
                 }
@@ -172,16 +184,21 @@ namespace SportClubApp
         // ============================================
         private void InicializarMenuAcceder()
         {
-            menuAcceder = new ContextMenuStrip();
-            menuAcceder.BackColor = Color.FromArgb(30, 30, 30);
-            menuAcceder.ForeColor = Color.White;
-            menuAcceder.ShowImageMargin = false;
-            menuAcceder.Font = new Font("Segoe UI", 10F);
+            menuAcceder = new ContextMenuStrip()
+            {
+                BackColor = Color.FromArgb(30, 30, 30),
+                ForeColor = Color.White,
+                ShowImageMargin = false,
+                Font = new Font("Segoe UI", 10F)
+            };
+            
 
-            ToolStripSeparator separador = new ToolStripSeparator();
+            ToolStripSeparator separador = new();
 
-            ToolStripMenuItem itemAccesoAdmin = new ToolStripMenuItem("Acceso Administrador");
-            itemAccesoAdmin.ForeColor = Color.FromArgb(255, 200, 100); // Color dorado
+            ToolStripMenuItem itemAccesoAdmin = new("Acceso Administrador")
+            {
+                ForeColor = Color.FromArgb(255, 200, 100) // Color dorado
+            };
             itemAccesoAdmin.Click += ItemAccesoAdmin_Click;
 
             // Agregar items al menú
@@ -193,12 +210,14 @@ namespace SportClubApp
             {
                 if (item is ToolStripMenuItem menuItem)
                 {
-                    ToolStripMenuItem currentItem = menuItem; 
+                    ToolStripMenuItem currentItem = menuItem;
 
-                    currentItem.MouseEnter += (s, e) => {
+                    currentItem.MouseEnter += (s, e) =>
+                    {
                         currentItem.BackColor = Color.FromArgb(20, 40, 80);
                     };
-                    currentItem.MouseLeave += (s, e) => {
+                    currentItem.MouseLeave += (s, e) =>
+                    {
                         currentItem.BackColor = Color.FromArgb(30, 30, 30);
                     };
                 }
@@ -235,7 +254,6 @@ namespace SportClubApp
             try
             {
                 string rutaImagen = Path.Combine(Application.StartupPath, "Images", "natacion_white.png");
-
                 Debug.WriteLine($"=== CARGANDO IMAGEN BLANCA ===");
                 Debug.WriteLine($"Ruta: {rutaImagen}");
                 Debug.WriteLine($"Existe: {File.Exists(rutaImagen)}");
@@ -296,7 +314,7 @@ namespace SportClubApp
         // ============================================
         // EVENTO: Botón Modo Oscuro
         // ============================================
-        private void btnModoOscuro_Click(object sender, EventArgs e)
+        private void BtnModoOscuro_Click(object sender, EventArgs e)
         {
             ThemeManager.ToggleTheme();
         }
@@ -305,7 +323,7 @@ namespace SportClubApp
         // ============================================
         // EVENTO: Botón Acceder (Mostrar dropdown)
         // ============================================
-        private void btnAcceder_Click(object sender, EventArgs e)
+        private void BtnAcceder_Click(object sender, EventArgs e)
         {
             // Mostrar el menú justo debajo del botón
             Point ubicacion = btnAcceder.PointToScreen(new Point(0, btnAcceder.Height));
@@ -315,7 +333,7 @@ namespace SportClubApp
         // ============================================
         // EVENTO: Botón Registro (Mostrar dropdown)
         // ============================================
-        private void btnRegistro_Click(object sender, EventArgs e)
+        private void BtnRegistro_Click(object? sender, EventArgs e)
         {
             // Mostrar el menú justo debajo del botón
             Point ubicacion = btnRegistro.PointToScreen(new Point(0, btnRegistro.Height));
@@ -325,19 +343,19 @@ namespace SportClubApp
         // ============================================
         // EVENTOS: Opciones del menú Registro
         // ============================================
-        private void ItemSocio_Click(object sender, EventArgs e)
+        private void ItemSocio_Click(object? sender, EventArgs e)
         {
 
             // Formulario Registro Socio:
-            FormRegistroSocio formSocio = new FormRegistroSocio();
+            FormRegistroSocio formSocio = new();
             formSocio.ShowDialog();
         }
 
-        private void ItemNoSocio_Click(object sender, EventArgs e)
+        private void ItemNoSocio_Click(object? sender, EventArgs e)
         {
 
             // Descomentar cuando crees el formulario:
-            FormRegistroNoSocio formNoSocio = new FormRegistroNoSocio();
+            FormRegistroNoSocio formNoSocio = new();
             formNoSocio.ShowDialog();
         }
 
@@ -347,17 +365,17 @@ namespace SportClubApp
         // EVENTOS: Opciones del menú Acceder
         // ============================================
 
-        private void ItemAccesoAdmin_Click(object sender, EventArgs e)
+        private void ItemAccesoAdmin_Click(object? sender, EventArgs e)
         {
             // Descomentar cuando crees el formulario:
-            FormAccesoAdmin formAccesoAdmin = new FormAccesoAdmin();
+            FormAccesoAdmin formAccesoAdmin = new();
             formAccesoAdmin.ShowDialog();
         }
 
         // ============================================
         // EVENTOS: PictureBox de Redes Sociales
         // ============================================
-        private void pictureBoxInstagram_Click(object sender, EventArgs e)
+        private void PictureBoxInstagram_Click(object? sender, EventArgs e)
         {
             try
             {
@@ -373,7 +391,7 @@ namespace SportClubApp
             }
         }
 
-        private void pictureBoxLinkedIn_Click(object sender, EventArgs e)
+        private void PictureBoxLinkedIn_Click(object sender, EventArgs e)
         {
             try
             {
@@ -389,7 +407,7 @@ namespace SportClubApp
             }
         }
 
-        private void pictureBoxYoutube_Click(object sender, EventArgs e)
+        private void PictureBoxYoutube_Click(object sender, EventArgs e)
         {
             try
             {

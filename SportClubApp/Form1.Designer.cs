@@ -87,7 +87,7 @@
             btnModoOscuro.TabIndex = 0;
             btnModoOscuro.Text = "Modo Oscuro";
             btnModoOscuro.UseVisualStyleBackColor = false;
-            btnModoOscuro.Click += btnModoOscuro_Click;
+            btnModoOscuro.Click += BtnModoOscuro_Click;
             // 
             // btnAcceder
             // 
@@ -102,7 +102,7 @@
             btnAcceder.TabIndex = 1;
             btnAcceder.Text = "Acceder";
             btnAcceder.UseVisualStyleBackColor = false;
-            btnAcceder.Click += btnAcceder_Click;
+            btnAcceder.Click += BtnAcceder_Click;
             // 
             // btnRegistro
             // 
@@ -117,7 +117,7 @@
             btnRegistro.TabIndex = 2;
             btnRegistro.Text = "Registro";
             btnRegistro.UseVisualStyleBackColor = false;
-            btnRegistro.Click += btnRegistro_Click;
+            btnRegistro.Click += BtnRegistro_Click;
             // 
             // lblAppName
             // 
@@ -159,7 +159,7 @@
             instagramBox.SizeMode = PictureBoxSizeMode.Zoom;
             instagramBox.TabIndex = 0;
             instagramBox.TabStop = false;
-            instagramBox.Click += pictureBoxInstagram_Click;
+            instagramBox.Click += PictureBoxInstagram_Click;
             // 
             // linkedinBox
             // 
@@ -171,7 +171,7 @@
             linkedinBox.SizeMode = PictureBoxSizeMode.Zoom;
             linkedinBox.TabIndex = 1;
             linkedinBox.TabStop = false;
-            linkedinBox.Click += pictureBoxLinkedIn_Click;
+            linkedinBox.Click += PictureBoxLinkedIn_Click;
             // 
             // youtubeBox
             // 
@@ -182,7 +182,7 @@
             youtubeBox.SizeMode = PictureBoxSizeMode.Zoom;
             youtubeBox.TabIndex = 2;
             youtubeBox.TabStop = false;
-            youtubeBox.Click += pictureBoxYoutube_Click;
+            youtubeBox.Click += PictureBoxYoutube_Click;
             // 
             // Form1
             // 
@@ -195,7 +195,7 @@
             Controls.Add(pnlHeader);
             Name = "Form1";
             Text = "SportClubApp";
-            Click += btnModoOscuro_Click;
+            //Click += BtnModoOscuro_Click;
             pnlHeader.ResumeLayout(false);
             flpHeaderButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
