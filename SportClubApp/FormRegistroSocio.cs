@@ -48,7 +48,7 @@ namespace SportClubApp
             {
                 this.BackColor = ThemeManager.DarkTheme.Background;
                 this.ForeColor = ThemeManager.DarkTheme.Text;
-                
+
             }
             else
             {
@@ -185,6 +185,16 @@ namespace SportClubApp
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtApellido_TextChanged(object sender, EventArgs e)
         {
 
         }

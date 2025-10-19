@@ -43,7 +43,7 @@
             // 
             lblRegistroAdmin.AutoSize = true;
             lblRegistroAdmin.Font = new Font("Candara", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblRegistroAdmin.Location = new Point(285, 81);
+            lblRegistroAdmin.Location = new Point(326, 103);
             lblRegistroAdmin.Name = "lblRegistroAdmin";
             lblRegistroAdmin.Size = new Size(226, 26);
             lblRegistroAdmin.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             lblUserAdmin.AutoSize = true;
             lblUserAdmin.Font = new Font("Candara", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUserAdmin.Location = new Point(237, 139);
+            lblUserAdmin.Location = new Point(271, 176);
             lblUserAdmin.Name = "lblUserAdmin";
             lblUserAdmin.Size = new Size(49, 15);
             lblUserAdmin.TabIndex = 1;
@@ -62,16 +62,17 @@
             // txtUserAdmin
             // 
             txtUserAdmin.Font = new Font("Candara", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtUserAdmin.Location = new Point(371, 139);
+            txtUserAdmin.Location = new Point(424, 176);
+            txtUserAdmin.Margin = new Padding(3, 4, 3, 4);
             txtUserAdmin.Name = "txtUserAdmin";
-            txtUserAdmin.Size = new Size(169, 23);
+            txtUserAdmin.Size = new Size(193, 23);
             txtUserAdmin.TabIndex = 2;
             // 
             // lblPasswordAdmin
             // 
             lblPasswordAdmin.AutoSize = true;
             lblPasswordAdmin.Font = new Font("Candara", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPasswordAdmin.Location = new Point(236, 184);
+            lblPasswordAdmin.Location = new Point(270, 233);
             lblPasswordAdmin.Name = "lblPasswordAdmin";
             lblPasswordAdmin.Size = new Size(69, 15);
             lblPasswordAdmin.TabIndex = 3;
@@ -80,16 +81,17 @@
             // txtPasswordAdmin
             // 
             txtPasswordAdmin.Font = new Font("Candara", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtPasswordAdmin.Location = new Point(371, 184);
+            txtPasswordAdmin.Location = new Point(424, 233);
+            txtPasswordAdmin.Margin = new Padding(3, 4, 3, 4);
             txtPasswordAdmin.Name = "txtPasswordAdmin";
-            txtPasswordAdmin.Size = new Size(168, 23);
-            txtPasswordAdmin.TabIndex = 4;
+            txtPasswordAdmin.Size = new Size(191, 23);
+            txtPasswordAdmin.TabIndex = 3;
             // 
             // lblConfPasswordAdmin
             // 
             lblConfPasswordAdmin.AutoSize = true;
             lblConfPasswordAdmin.Font = new Font("Candara", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblConfPasswordAdmin.Location = new Point(233, 229);
+            lblConfPasswordAdmin.Location = new Point(266, 290);
             lblConfPasswordAdmin.Name = "lblConfPasswordAdmin";
             lblConfPasswordAdmin.Size = new Size(128, 15);
             lblConfPasswordAdmin.TabIndex = 5;
@@ -97,20 +99,22 @@
             // 
             // txtConfPassAdmin
             // 
-            txtConfPassAdmin.Location = new Point(371, 226);
+            txtConfPassAdmin.Location = new Point(424, 286);
+            txtConfPassAdmin.Margin = new Padding(3, 4, 3, 4);
             txtConfPassAdmin.Name = "txtConfPassAdmin";
-            txtConfPassAdmin.Size = new Size(169, 23);
-            txtConfPassAdmin.TabIndex = 6;
+            txtConfPassAdmin.Size = new Size(193, 26);
+            txtConfPassAdmin.TabIndex = 4;
             // 
             // btnRegistrarAdmin
             // 
             btnRegistrarAdmin.BackColor = Color.FromArgb(0, 192, 0);
             btnRegistrarAdmin.Font = new Font("Candara", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegistrarAdmin.ForeColor = Color.White;
-            btnRegistrarAdmin.Location = new Point(243, 279);
+            btnRegistrarAdmin.Location = new Point(278, 353);
+            btnRegistrarAdmin.Margin = new Padding(3, 4, 3, 4);
             btnRegistrarAdmin.Name = "btnRegistrarAdmin";
-            btnRegistrarAdmin.Size = new Size(110, 42);
-            btnRegistrarAdmin.TabIndex = 7;
+            btnRegistrarAdmin.Size = new Size(126, 53);
+            btnRegistrarAdmin.TabIndex = 5;
             btnRegistrarAdmin.Text = "Registrar Administrador";
             btnRegistrarAdmin.UseVisualStyleBackColor = false;
             btnRegistrarAdmin.Click += btnRegistrar_ClickAdmin;
@@ -120,19 +124,20 @@
             btnCancelarAdmin.BackColor = Color.FromArgb(0, 192, 0);
             btnCancelarAdmin.Font = new Font("Candara", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancelarAdmin.ForeColor = Color.White;
-            btnCancelarAdmin.Location = new Point(430, 280);
+            btnCancelarAdmin.Location = new Point(491, 355);
+            btnCancelarAdmin.Margin = new Padding(3, 4, 3, 4);
             btnCancelarAdmin.Name = "btnCancelarAdmin";
-            btnCancelarAdmin.Size = new Size(110, 41);
-            btnCancelarAdmin.TabIndex = 8;
+            btnCancelarAdmin.Size = new Size(126, 52);
+            btnCancelarAdmin.TabIndex = 6;
             btnCancelarAdmin.Text = "Cancelar";
             btnCancelarAdmin.UseVisualStyleBackColor = false;
             btnCancelarAdmin.Click += btnCancelar_Click;
             // 
             // FormRegistroAdmin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 570);
             Controls.Add(btnCancelarAdmin);
             Controls.Add(btnRegistrarAdmin);
             Controls.Add(txtConfPassAdmin);
@@ -142,6 +147,7 @@
             Controls.Add(txtUserAdmin);
             Controls.Add(lblUserAdmin);
             Controls.Add(lblRegistroAdmin);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormRegistroAdmin";
             Text = "Formulario Acceso Administrador";
             ResumeLayout(false);

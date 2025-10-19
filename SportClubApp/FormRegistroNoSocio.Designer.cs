@@ -56,7 +56,7 @@
             // 
             lblTituloNoSocio.AutoSize = true;
             lblTituloNoSocio.Font = new Font("Candara", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblTituloNoSocio.Location = new Point(317, 64);
+            lblTituloNoSocio.Location = new Point(362, 81);
             lblTituloNoSocio.Name = "lblTituloNoSocio";
             lblTituloNoSocio.Size = new Size(221, 26);
             lblTituloNoSocio.TabIndex = 0;
@@ -66,7 +66,7 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.Font = new Font("Candara", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNombre.Location = new Point(209, 125);
+            lblNombre.Location = new Point(239, 158);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(53, 15);
             lblNombre.TabIndex = 1;
@@ -76,7 +76,7 @@
             // 
             lblApellido.AutoSize = true;
             lblApellido.Font = new Font("Candara", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblApellido.Location = new Point(209, 154);
+            lblApellido.Location = new Point(239, 195);
             lblApellido.Name = "lblApellido";
             lblApellido.Size = new Size(52, 15);
             lblApellido.TabIndex = 2;
@@ -86,7 +86,7 @@
             // 
             lblDni.AutoSize = true;
             lblDni.Font = new Font("Candara", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDni.Location = new Point(209, 182);
+            lblDni.Location = new Point(239, 231);
             lblDni.Name = "lblDni";
             lblDni.Size = new Size(28, 15);
             lblDni.TabIndex = 3;
@@ -96,7 +96,7 @@
             // 
             lblTelefono.AutoSize = true;
             lblTelefono.Font = new Font("Candara", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTelefono.Location = new Point(209, 211);
+            lblTelefono.Location = new Point(239, 267);
             lblTelefono.Name = "lblTelefono";
             lblTelefono.Size = new Size(56, 15);
             lblTelefono.TabIndex = 4;
@@ -106,7 +106,7 @@
             // 
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Candara", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblEmail.Location = new Point(208, 238);
+            lblEmail.Location = new Point(238, 301);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(37, 15);
             lblEmail.TabIndex = 5;
@@ -116,7 +116,7 @@
             // 
             lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Candara", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUsername.Location = new Point(208, 266);
+            lblUsername.Location = new Point(238, 337);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(49, 15);
             lblUsername.TabIndex = 6;
@@ -126,7 +126,7 @@
             // 
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Candara", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPassword.Location = new Point(209, 296);
+            lblPassword.Location = new Point(239, 375);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(69, 15);
             lblPassword.TabIndex = 7;
@@ -136,7 +136,7 @@
             // 
             lblConfirmarPassword.AutoSize = true;
             lblConfirmarPassword.Font = new Font("Candara", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblConfirmarPassword.Location = new Point(208, 325);
+            lblConfirmarPassword.Location = new Point(238, 412);
             lblConfirmarPassword.Name = "lblConfirmarPassword";
             lblConfirmarPassword.Size = new Size(128, 15);
             lblConfirmarPassword.TabIndex = 8;
@@ -146,7 +146,7 @@
             // 
             lblFechaVisita.AutoSize = true;
             lblFechaVisita.Font = new Font("Candara", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblFechaVisita.Location = new Point(208, 354);
+            lblFechaVisita.Location = new Point(238, 448);
             lblFechaVisita.Name = "lblFechaVisita";
             lblFechaVisita.Size = new Size(88, 15);
             lblFechaVisita.TabIndex = 9;
@@ -154,20 +154,22 @@
             // 
             // dtpFechaVisita
             // 
-            dtpFechaVisita.Location = new Point(354, 348);
+            dtpFechaVisita.Location = new Point(405, 441);
+            dtpFechaVisita.Margin = new Padding(3, 4, 3, 4);
             dtpFechaVisita.Name = "dtpFechaVisita";
-            dtpFechaVisita.Size = new Size(227, 23);
-            dtpFechaVisita.TabIndex = 10;
+            dtpFechaVisita.Size = new Size(259, 26);
+            dtpFechaVisita.TabIndex = 21;
             // 
             // btnRegistrar
             // 
             btnRegistrar.BackColor = Color.FromArgb(0, 192, 0);
             btnRegistrar.Font = new Font("Candara", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegistrar.ForeColor = Color.White;
-            btnRegistrar.Location = new Point(253, 430);
+            btnRegistrar.Location = new Point(289, 545);
+            btnRegistrar.Margin = new Padding(3, 4, 3, 4);
             btnRegistrar.Name = "btnRegistrar";
-            btnRegistrar.Size = new Size(83, 35);
-            btnRegistrar.TabIndex = 11;
+            btnRegistrar.Size = new Size(95, 44);
+            btnRegistrar.TabIndex = 23;
             btnRegistrar.Text = "Guardar";
             btnRegistrar.UseVisualStyleBackColor = false;
             btnRegistrar.Click += btnRegistrar_Click;
@@ -177,86 +179,96 @@
             btnCancelar.BackColor = Color.FromArgb(0, 192, 0);
             btnCancelar.Font = new Font("Candara", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancelar.ForeColor = Color.White;
-            btnCancelar.Location = new Point(499, 430);
+            btnCancelar.Location = new Point(570, 545);
+            btnCancelar.Margin = new Padding(3, 4, 3, 4);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(83, 35);
-            btnCancelar.TabIndex = 12;
+            btnCancelar.Size = new Size(95, 44);
+            btnCancelar.TabIndex = 24;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(354, 122);
+            txtNombre.Location = new Point(405, 155);
+            txtNombre.Margin = new Padding(3, 4, 3, 4);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(227, 23);
+            txtNombre.Size = new Size(259, 26);
             txtNombre.TabIndex = 13;
             // 
             // txtApellido
             // 
-            txtApellido.Location = new Point(354, 151);
+            txtApellido.Location = new Point(405, 191);
+            txtApellido.Margin = new Padding(3, 4, 3, 4);
             txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(227, 23);
+            txtApellido.Size = new Size(259, 26);
             txtApellido.TabIndex = 14;
             // 
             // txtDni
             // 
-            txtDni.Location = new Point(354, 179);
+            txtDni.Location = new Point(405, 227);
+            txtDni.Margin = new Padding(3, 4, 3, 4);
             txtDni.Name = "txtDni";
-            txtDni.Size = new Size(227, 23);
+            txtDni.Size = new Size(259, 26);
             txtDni.TabIndex = 15;
             // 
             // txtTelefono
             // 
-            txtTelefono.Location = new Point(355, 208);
+            txtTelefono.Location = new Point(406, 263);
+            txtTelefono.Margin = new Padding(3, 4, 3, 4);
             txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(226, 23);
+            txtTelefono.Size = new Size(258, 26);
             txtTelefono.TabIndex = 16;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(355, 235);
+            txtEmail.Location = new Point(406, 298);
+            txtEmail.Margin = new Padding(3, 4, 3, 4);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(227, 23);
+            txtEmail.Size = new Size(259, 26);
             txtEmail.TabIndex = 17;
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(355, 262);
+            txtUsername.Location = new Point(406, 332);
+            txtUsername.Margin = new Padding(3, 4, 3, 4);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(227, 23);
+            txtUsername.Size = new Size(259, 26);
             txtUsername.TabIndex = 18;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(355, 288);
+            txtPassword.Location = new Point(406, 365);
+            txtPassword.Margin = new Padding(3, 4, 3, 4);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(226, 23);
+            txtPassword.Size = new Size(258, 26);
             txtPassword.TabIndex = 19;
             // 
             // txtConfirmarPassword
             // 
-            txtConfirmarPassword.Location = new Point(355, 317);
+            txtConfirmarPassword.Location = new Point(406, 402);
+            txtConfirmarPassword.Margin = new Padding(3, 4, 3, 4);
             txtConfirmarPassword.Name = "txtConfirmarPassword";
-            txtConfirmarPassword.Size = new Size(226, 23);
+            txtConfirmarPassword.Size = new Size(258, 26);
             txtConfirmarPassword.TabIndex = 20;
             // 
             // chkHabilitado
             // 
             chkHabilitado.AutoSize = true;
             chkHabilitado.Font = new Font("Candara", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            chkHabilitado.Location = new Point(211, 393);
+            chkHabilitado.Location = new Point(241, 498);
+            chkHabilitado.Margin = new Padding(3, 4, 3, 4);
             chkHabilitado.Name = "chkHabilitado";
             chkHabilitado.Size = new Size(82, 19);
-            chkHabilitado.TabIndex = 21;
+            chkHabilitado.TabIndex = 22;
             chkHabilitado.Text = "Habilitado";
             chkHabilitado.UseVisualStyleBackColor = true;
             // 
             // FormRegistroNoSocio
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 511);
+            ClientSize = new Size(1045, 647);
             Controls.Add(chkHabilitado);
             Controls.Add(txtConfirmarPassword);
             Controls.Add(txtPassword);
@@ -279,6 +291,7 @@
             Controls.Add(lblApellido);
             Controls.Add(lblNombre);
             Controls.Add(lblTituloNoSocio);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormRegistroNoSocio";
             Text = "Formulario Registro No Socio";
             ResumeLayout(false);

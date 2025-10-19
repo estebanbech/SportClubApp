@@ -129,7 +129,7 @@
             chkAptoFisico.Location = new Point(241, 382);
             chkAptoFisico.Name = "chkAptoFisico";
             chkAptoFisico.Size = new Size(98, 23);
-            chkAptoFisico.TabIndex = 9;
+            chkAptoFisico.TabIndex = 22;
             chkAptoFisico.Text = "Apto Físico";
             chkAptoFisico.UseVisualStyleBackColor = true;
             // 
@@ -139,7 +139,7 @@
             chkHabilitado.Location = new Point(544, 382);
             chkHabilitado.Name = "chkHabilitado";
             chkHabilitado.Size = new Size(96, 23);
-            chkHabilitado.TabIndex = 10;
+            chkHabilitado.TabIndex = 23;
             chkHabilitado.Text = "Habilitado";
             chkHabilitado.UseVisualStyleBackColor = true;
             // 
@@ -150,7 +150,7 @@
             button1.Location = new Point(242, 428);
             button1.Name = "button1";
             button1.Size = new Size(93, 32);
-            button1.TabIndex = 11;
+            button1.TabIndex = 24;
             button1.Text = "Guardar";
             button1.UseVisualStyleBackColor = false;
             button1.Click += btnGuardar_Click;
@@ -162,7 +162,7 @@
             button2.Location = new Point(554, 428);
             button2.Name = "button2";
             button2.Size = new Size(86, 32);
-            button2.TabIndex = 12;
+            button2.TabIndex = 25;
             button2.Text = "Cancelar";
             button2.UseVisualStyleBackColor = false;
             button2.Click += btnCancelar_Click;
@@ -173,6 +173,7 @@
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(263, 25);
             txtNombre.TabIndex = 13;
+            txtNombre.TextChanged += txtNombre_TextChanged;
             // 
             // txtApellido
             // 
@@ -180,6 +181,7 @@
             txtApellido.Name = "txtApellido";
             txtApellido.Size = new Size(263, 25);
             txtApellido.TabIndex = 14;
+            txtApellido.TextChanged += txtApellido_TextChanged;
             // 
             // txtDNI
             // 
@@ -207,7 +209,7 @@
             dtpFechaAlta.Location = new Point(378, 351);
             dtpFechaAlta.Name = "dtpFechaAlta";
             dtpFechaAlta.Size = new Size(261, 25);
-            dtpFechaAlta.TabIndex = 18;
+            dtpFechaAlta.TabIndex = 21;
             // 
             // lblUsuario
             // 
@@ -224,7 +226,7 @@
             txtUsuario.Location = new Point(378, 252);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(261, 25);
-            txtUsuario.TabIndex = 20;
+            txtUsuario.TabIndex = 18;
             // 
             // lblPasword
             // 
@@ -241,7 +243,7 @@
             txtPassword.Location = new Point(378, 284);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(262, 25);
-            txtPassword.TabIndex = 22;
+            txtPassword.TabIndex = 19;
             txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // label2
@@ -259,7 +261,7 @@
             txtConfirmarPassword.Location = new Point(378, 315);
             txtConfirmarPassword.Name = "txtConfirmarPassword";
             txtConfirmarPassword.Size = new Size(262, 25);
-            txtConfirmarPassword.TabIndex = 24;
+            txtConfirmarPassword.TabIndex = 20;
             // 
             // FormRegistroSocio
             // 
@@ -305,21 +307,21 @@
         private Label lblTelefono;
         private Label lblEMail;
         private Label lblFechaAlta;
-        private CheckBox chkAptoFisico;
-        private CheckBox chkHabilitado;
-        private Button button1;
-        private Button button2;
         private TextBox txtNombre;
         private TextBox txtApellido;
         private TextBox txtDNI;
         private TextBox txtTelefono;
         private TextBox txtEmail;
-        private DateTimePicker dtpFechaAlta;
         private Label lblUsuario;
         private TextBox txtUsuario;
         private Label lblPasword;
         private TextBox txtPassword;
         private Label label2;
         private TextBox txtConfirmarPassword;
+        private DateTimePicker dtpFechaAlta;
+        private CheckBox chkAptoFisico;
+        private CheckBox chkHabilitado;
+        private Button button1;
+        private Button button2;
     }
 }
