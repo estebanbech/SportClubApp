@@ -309,10 +309,7 @@
         private Label lblUsername;
         private Label lblPassword;
         private Label lblConfirmarPassword;
-        private Label lblFechaVisita;
-        private DateTimePicker dtpFechaVisita;
-        private Button btnRegistrar;
-        private Button btnCancelar;
+        private Label lblFechaVisita;        
         private TextBox txtNombre;
         private TextBox txtApellido;
         private TextBox txtDni;
@@ -320,7 +317,10 @@
         private TextBox txtEmail;
         private TextBox txtUsername;
         private TextBox txtPassword;
+        private DateTimePicker dtpFechaVisita;
         private TextBox txtConfirmarPassword;
         private CheckBox chkHabilitado;
+        private Button btnRegistrar;
+        private Button btnCancelar;
     }
 }
